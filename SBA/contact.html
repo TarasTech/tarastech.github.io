@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    <title>Building your own PC</title>
+    <style>
+        .buildCheckboxes {
+            display: inline-flex;
+        }
+        
+        .buildCheckboxes input,
+        .buildCheckboxes label {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <div class="container-narrow">
+
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li class="dropdown">
+                    <a class="dropbtn" href="index.html">Home 
+                      <i class="fa fa-caret-down"></i>
+                        </a>
+                    <div class="dropdown-content">
+                        <a href="parts.html">Parts</a>
+                        <a href="https://www.youtube.com/watch?v=QtBDL8EiNZo">About</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </li>
+                <li><a href="parts.html">Parts</a></li>
+                <li><a href="https://www.youtube.com/watch?v=QtBDL8EiNZo">About</a></li>
+                <li class="active"><a href="#">Contact</a></li>
+            </ul>
+            <h3 class="muted" style="color: black;">Project Help Build PC</h3>
+        </div>
+
+        <hr>
+
+        <div class="jumbotron">
+            <h1>Contacts</h1>
+            <p class="lead">Want to ask a question? Want us to help you build a computer? Fill out the form(s) below!</p>
+        </div>
+
+        <hr>
+
+        <div class="row-fluid marketing">
+            <div class="span12">
+                <h2 style="text-align: center;padding-bottom: 30px;">Ask a question!</h2>
+                <form id="questionForm" style="text-align: center; " onsubmit="return false">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="questionFName" name="fname" required>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="questionLName" name="lname" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                    <label for="question">Question:</label>
+                    <textarea style="width: 400px;" rows="5" cols="60" name="quesiton" placeholder="Input you're question here..." required></textarea><br>
+                    <button id="submitButton" class="btn btn-primary" type="submit">Send</button><br><br>
+                    <i>**It may take up to 24 hours - never, to receive a reply</i>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row-fluid marketing">
+            <div class="span12">
+                <h2 style="text-align: center;padding-bottom: 30px;">Looking for a PC Build Reccomendation?</h2>
+                <form id="buildForm" style="text-align: center; " onsubmit="return false">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="questionFName" name="fname" required>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="questionLName" name="lname" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                    <h5>How will you be using this build?</h5>
+                    <div class="buildCheckboxes">
+                        <input type="checkbox" id="work" name="work" value="Work"><label for="work">Work</label>
+                        <input type="checkbox" id="personal" name="personal" value="Personal"><label for="personal">Personal</label>
+                        <input type="checkbox" id="gaming" name="gaming" value="Gaming"><label for="gaming">Gaming</label>
+                    </div>
+                    <br>
+                    <label style="display: inline-flex;" for="budget">Budget: $</label>
+                    <input style="width: 100px;" type="number" min="200.00" step="0.01" max="5000.00" value="1000" name="budget" required/>
+                    <br>
+                    <button id="submitButton" class="btn btn-primary" type="submit">Send</button><br><br>
+                    <i>**It may take up to 24 hours - never, to receive a reply</i>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>&copy; Some Computer Company Thats Definitely Copyrighted 2021</p>
+        </div>
+
+        <script src="script/forms.js"></script>
+    </div>
+
+</body>
+
+</html>
